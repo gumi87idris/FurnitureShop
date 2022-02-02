@@ -52,7 +52,7 @@ class Product(models.Model):
     }
 
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(default='description')
     price = models.IntegerField()
     status = models.BooleanField()
     group = models.CharField(max_length=20, choices=CHOICE_GROUP, )

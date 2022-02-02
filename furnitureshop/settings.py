@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'furniture_db',
-        'USER': 'superman',
+        'USER': 'hello',
         'PASSWORD': '1',
         'HOST': 'localhost',
         'PORT': 5432
