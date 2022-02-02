@@ -238,7 +238,7 @@
 }
 .fa-gear:before,
 .fa-cog:before {
-  content: "\f013";
+  content: "\f4cc";
 }
 .fa-trash-o:before {
   content: "\f014";
@@ -879,7 +879,7 @@
   content: "\f0f9";
 }
 .fa-medkit:before {
-  content: "\f0fa";
+  content: "\f8f7";
 }
 .fa-fighter-jet:before {
   content: "\f0fb";
@@ -1249,7 +1249,7 @@
   content: "\f178";
 }
 .fa-apple:before {
-  content: "\f179";
+  content: "\f6c0";
 }
 .fa-windows:before {
   content: "\f17a";
@@ -1408,7 +1408,7 @@
   content: "\f1ae";
 }
 .fa-paw:before {
-  content: "\f1b0";
+  content: "\f4b8";
 }
 .fa-spoon:before {
   content: "\f1b1";
