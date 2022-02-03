@@ -23,40 +23,49 @@
 			</div>
 
 		</div>
-		<div class="portfolioContainer wow fadeInUp delay-04s">
-<!--			<div class=" Portfolio-box printdesign">-->
-<!--				<a href="img/sofa-cat.jpeg"><img src="{% static 'img/sofa-cat.jpeg' %}" alt=""></a>-->
-<!--				<h3>Диваны</h3>-->
-<!--				<p>Красивые и лучшие диваны</p>-->
-<!--			</div>-->
-			{% for post in pr %}
-			<div class="Portfolio-box branding">
-				<a href="img/armchair-cat.jpeg"><img src="{% static 'img/armchair-cat.jpeg' %}" alt=""></a>
-				<h3>{{ post.name }}</h3>
-				<p>Комфортные кресла</p>
-			</div>
-			{% endfor %}
-<!--			<div class=" Portfolio-box branding">-->
-<!--				<a href="img/chair-cat.jpeg"><img src="{% static 'img/chair-cat.jpeg' %}" alt=""></a>-->
-<!--				<h3>Стулья</h3>-->
-<!--				<p>Стильные стулья</p>-->
-<!--			</div>-->
-<!--			<div class=" Portfolio-box photography">-->
-<!--				<a href="img/table-cat.jpeg"><img src="{% static 'img/table-cat.jpeg' %}" alt=""></a>-->
-<!--				<h3>Столы</h3>-->
-<!--				<p>Красивые и прочные столы</p>-->
-<!--			</div>-->
-<!--			<div class=" Portfolio-box branding">-->
-<!--				<a href="img/bed-cat.jpeg"><img src="{% static 'img/bed-cat.jpeg' %}" alt=""></a>-->
-<!--				<h3>Спальни</h3>-->
-<!--				<p>Спальни мечты</p>-->
-<!--			</div>-->
-<!--			<div class=" Portfolio-box photography">-->
-<!--				<a href="img/kids-cat.jpeg"><img src="{% static 'img/kids-cat.jpeg' %}" alt=""></a>-->
-<!--				<h3>Детские кровати</h3>-->
-<!--				<p>Лучшее детям</p>-->
-<!--			</div>-->
+	<div class="portfolioContainer wow fadeInUp delay-04s">
+		{% for post in pr %}
+		{% if post.status %}
+		{% if post.group == 'sofa' %}
+		<div class=" Portfolio-box printdesign">
+			<a href="img/Portfolio-pic1.jpg"><img src="{{ post.img.url }}" alt=""></a>
+			<h3>{{ post.name }}</h3>
+			<p>Цена: {{ post.price }}$</p>
 		</div>
+		{% elif post.group == 'armchair' %}
+		<div class="Portfolio-box webdesign">
+			<a href="img/Portfolio-pic2.jpg"><img src="{{ post.img.url }}" alt=""></a>
+			<h3>{{ post.name }}</h3>
+			<p>Цена: {{ post.price }}$</p>
+		</div>
+		{% elif post.group == 'table' %}
+		<div class=" Portfolio-box branding">
+			<a href="img/Portfolio-pic3.jpg"><img src="img/Portfolio-pic3.jpg" alt=""></a>
+			<h3>{{ post.name }}</h3>
+			<p>Цена: {{ post.price }}$</p>
+		</div>
+		{% elif post.group == 'chair' %}
+		<div class=" Portfolio-box photography">
+			<a href="img/Portfolio-pic4.jpg"><img src="img/Portfolio-pic4.jpg" alt=""></a>
+			<h3>{{ post.name }}</h3>
+			<p>Цена: {{ post.price }}$</p>
+		</div>
+		{% elif post.group == 'bed' %}
+		<div class=" Portfolio-box branding">
+			<a href="img/Portfolio-pic5.jpg"><img src="img/Portfolio-pic5.jpg" alt=""></a>
+			<h3>{{ post.name }}r</h3>
+			<p>Цена: {{ post.price }}$</p>
+		</div>
+		{% elif post.group == 'kids' %}
+		<div class=" Portfolio-box photography">
+			<a href="img/Portfolio-pic6.jpg"><img src="img/Portfolio-pic6.jpg" alt=""></a>
+			<h3>{{ post.name }}</h3>
+			<p>Цена: {{ post.price }}$</p>
+		</div>
+		{% endif %}
+		{% endif %}
+		{% endfor %}
+	</div>
 	</section>
 	<!--main-section-end-->
 </body>
