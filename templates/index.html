@@ -7,6 +7,14 @@
 
 <section class="main-section" id="service">
 		<!--main-section-start-->
+
+			{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<div class="alert alert-success" role="alert">{{ message }}</div>
+				{% endfor %}
+			</ul>
+			{% endif %}
 		<div class="container">
 			<h2>Категории</h2>
 			<h6>У нас большое разнообразие товаров</h6>
